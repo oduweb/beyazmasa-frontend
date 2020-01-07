@@ -4,11 +4,12 @@ export default class Login extends Component {
   render() {
     return (
       <div className="flex w-screen h-screen">
-        <div className="flex items-center  relative bg-white w-full h-screen">
+        {/* Login page left side */}
+        <div className="flex items-center relative bg-white w-full h-screen">
           {/* Login Form Area */}
           <div className="px-6 py-4 w-full">
             <div className="text-center text-gray-800 mb-8 font-light h-8 text-lg">
-              FRONTEND <span className="font-bold text-xs">V2</span>
+              iNODRA | Clinweb <span className="font-bold text-xs">V2</span>
             </div>
             <div>
               <label
@@ -48,12 +49,12 @@ export default class Login extends Component {
               </button>
             </div>
           </div>
-
           {/* Copyrigt Footer Area */}
           <div className="inline-flex justify-center absolute items-center bottom-0 h-8 text-center bg-blue-400 text-white w-full font-light text-xs font-sans">
-            copyright
+            Copyright 2020
           </div>
         </div>
+        {/* Login page right side */}
         <div className="flex-shrink-0 items-center bg-gray-700 h-screen w-8/12 hidden sm:block ">
           <img
             className="hidden sm:block object-cover h-screen z-0"
