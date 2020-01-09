@@ -1,10 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje frontend teknolojisi olarak [Create React App](https://github.com/facebook/create-react-app) kullanıldı.
 
 ## iNODRA | Clinweb v2
 
 Projeyi çalıştırmak için yapılması gereken adımlar;
 
-### `yarn start`
+### `npm start`
 
 bla bla bla
 

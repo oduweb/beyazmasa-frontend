@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { counter: 0 };
+  }
+
   render() {
     return (
       <div className="flex w-screen h-screen">
@@ -9,7 +14,8 @@ export default class Login extends Component {
           {/* Login Form Area */}
           <div className="px-6 py-4 w-full">
             <div className="text-center text-gray-800 mb-8 font-light h-8 text-lg">
-              iNODRA | Clinweb <span className="font-bold text-xs">V2</span>
+              iNODRA | Clinweb{" "}
+              <span className="font-bold text-xs">V{this.state.counter}</span>
             </div>
             <div>
               <label
@@ -39,7 +45,7 @@ export default class Login extends Component {
             </div>
             <div className="text-right font-light text-xs mt-2 ">
               <button className="inline-flex focus:outline-none">
-                <span>Giriş</span>
+                <span>{this.props.title}</span>
                 <img
                   className="ml-1 mt-090"
                   width="16px"
@@ -55,7 +61,7 @@ export default class Login extends Component {
           </div>
         </div>
         {/* Login page right side */}
-        <div className="flex-shrink-0 items-center bg-gray-700 h-screen w-8/12 hidden sm:block ">
+        <div className="flex-shrink-0 relative items-center bg-gray-700 h-screen w-8/12 hidden sm:block ">
           <img
             className="hidden sm:block object-cover h-screen z-0"
             alt="DnA"
