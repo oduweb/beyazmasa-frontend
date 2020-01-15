@@ -1,7 +1,7 @@
 import React from "react";
 
-//import Login from "./component/Login";
-import Dashboard from "./component/pages/Dashboard";
+//import Login from "./component/pages/Login";
+import Dashboard from "./component/Dashboard";
 
 function App() {
   return (
