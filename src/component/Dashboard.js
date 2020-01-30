@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import SideMenu from "./pages/SideMenu";
 import Content from "./pages/Content";
 
+/* Components */
+import DropDownUser from "./ui/DropDownUser";
+import DropDown from "./ui/DropDown";
+
 export default class Dashboard extends Component {
   render() {
     return (
       <div className="flex flex-col bg-red-600 h-screen">
         {/* Top navbar area */}
-        <nav className="flex bg-gray-900 shadow-lg text-white h-16 text-white justify-between flex-wrap items-center">
+        <nav className="flex bg-gray-900 shadow-lg h-16 text-white justify-between flex-wrap items-center">
           {/* Nav Logo area */}
           <div className="">
             <div className="text-xs pl-1">Logo</div>
@@ -18,14 +22,30 @@ export default class Dashboard extends Component {
           </div>
           {/* Nav left Link area */}
           <div className="flex flex-wrap items-center">
-            <div className="text-xs pr-1">Setting</div>
-            <div className="text-xs pr-1">| Exit</div>
+            <div className="text-xs pr-3 z-50">
+              <DropDown
+                placeholder="Bilgi"
+                options={[{ id: "tolga", value: "tolga" }]}
+              />
+            </div>
+            <div className="text-xs pr-3 z-50">
+              <DropDown
+                placeholder="Ayarlar"
+                options={[
+                  { id: "1", value: "Exit" },
+                  { id: "2", value: "Exit 2" }
+                ]}
+              />
+            </div>
+            <div className="text-xs pr-3 z-50">
+              <DropDownUser />
+            </div>
           </div>
         </nav>
         {/* Side area */}
         <div className="flex flex-row h-full relative">
           {/* Side Menu area */}
-          <SideMenu />
+          <SideMenu info="Ana Sayfa" />
           {/* General Content area */}
           <div className="flex flex-col bg-gray-300 w-full relative">
             {/* Mobile hidden menu area */}

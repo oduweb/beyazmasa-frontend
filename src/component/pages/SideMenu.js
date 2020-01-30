@@ -10,7 +10,7 @@ export default class SideMenu extends Component {
         <ul className="flex flex-row justify-between text-white border-b border-gray-700 -ml-1 hover:bg-gray-600">
           <li className="w-full h-full">
             <a href="#?" className="p-2 h-full w-full flex font-thin">
-              s
+              {this.props.info}
             </a>
           </li>
         </ul>
