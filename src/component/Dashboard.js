@@ -5,6 +5,9 @@ import Content from "./pages/Content";
 /* Components */
 import DropDownUser from "./ui/DropDownUser";
 import DropDown from "./ui/DropDown";
+import { Switch, Route } from "react-router-dom";
+import NotFound from "./pages/NotFound";
+import NewUser from "./pages/NewUser";
 
 export default class Dashboard extends Component {
   render() {
@@ -54,7 +57,11 @@ export default class Dashboard extends Component {
             </div>
             {/* Content area */}
             <div className="bg-gray-200 w-full text-left text-xs pl-3"></div>
-            <Content />
+            <Switch>
+              <Route exact path="/Dashboard" component={Content}></Route>
+              <Route exact path="/NewUser" component={NewUser}></Route>
+              <Route component={NotFound}></Route>
+            </Switch>
           </div>
           {/* Right panel area */}
           <div className="flex flex-col bg-gray-800 text-white w-8 text-center text-xs pt-3">
