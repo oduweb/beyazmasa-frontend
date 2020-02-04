@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class SideMenu extends Component {
   render() {
@@ -7,11 +8,22 @@ export default class SideMenu extends Component {
         <p className="text-gray-600 font-light font-thin text-xs pt-2 pb-2 pl-1 italic">
           Side Menu
         </p>
-        <ul className="flex flex-row justify-between text-white border-b border-gray-700 -ml-1 hover:bg-gray-600">
-          <li className="w-full h-full">
-            <a href="#?" className="p-2 h-full w-full flex font-thin">
+        <ul className="flex flex-col justify-between text-white  -ml-1 ">
+          <li className="w-full h-full border-b border-gray-700">
+            <Link
+              to="Dashboard"
+              className="p-2 h-full w-full flex font-thin hover:bg-gray-600"
+            >
               {this.props.info}
-            </a>
+            </Link>
+          </li>
+          <li className="w-full h-full border-b border-gray-700">
+            <Link
+              to="NewUser"
+              className="p-2 h-full w-full flex font-thin hover:bg-gray-600"
+            >
+              New User
+            </Link>
           </li>
         </ul>
         {/*Side Menu footer area */}

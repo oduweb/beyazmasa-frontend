@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 /*const style = {
   disabled: "",
@@ -59,14 +60,14 @@ class DropDown extends Component {
         {showDropDown && (
           <div className="dropdown-item w-32 py-2 mt-2 bg-white text-black rounded-lg shadow-md absolute left-auto right-0 ">
             {options.map(option => (
-              <a
-                href="/#"
+              <Link
+                to="Login"
                 className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
                 key={option.id}
                 onClick={this.onChangeHandlerFactory(option.id)}
               >
                 {option.value}
-              </a>
+              </Link>
             ))}
           </div>
         )}

@@ -4,6 +4,7 @@ import "./css/vendor/tailwind.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
+import "alertifyjs/build/css/alertify.min.css";
 
 ReactDOM.render(
   <Router>

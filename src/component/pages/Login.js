@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
   render() {
@@ -38,15 +39,17 @@ export default class Login extends Component {
               ></input>
             </div>
             <div className="text-right font-light text-xs mt-2 ">
-              <button className="inline-flex focus:outline-none">
-                <span>{this.props.title}</span>
-                <img
-                  className="ml-1 mt-090"
-                  width="16px"
-                  alt="Login"
-                  src="https://img.icons8.com/small/100/000000/enter-2.png"
-                ></img>
-              </button>
+              <Link to="Dashboard">
+                <button className="inline-flex focus:outline-none">
+                  <span>{this.props.title}</span>
+                  <img
+                    className="ml-1 mt-090"
+                    width="16px"
+                    alt="Login"
+                    src="https://img.icons8.com/small/100/000000/enter-2.png"
+                  ></img>
+                </button>
+              </Link>
             </div>
           </div>
           {/* Copyrigt Footer Area */}
