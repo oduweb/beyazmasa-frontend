@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "../ui/Modal";
 
 export default class Content extends Component {
   render() {
@@ -14,6 +15,12 @@ export default class Content extends Component {
           Consectetur sit esse ex minim sunt esse est aute. Sunt nisi deserunt
           incididunt aute officia dolor fugiat esse adipisicing mollit ipsum
           qui.
+          <Modal
+            durum={true}
+            MessageType="Error"
+            Title="Error"
+            ContentMessage="blablabla"
+          ></Modal>
         </div>
       </div>
     );
