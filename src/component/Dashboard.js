@@ -57,6 +57,7 @@ export default class Dashboard extends Component {
             </div>
             {/* Content area */}
             <div className="bg-gray-200 w-full text-left text-xs pl-3"></div>
+
             <Switch>
               <Route exact path="/Dashboard" component={Content}></Route>
               <Route exact path="/NewUser" component={NewUser}></Route>
