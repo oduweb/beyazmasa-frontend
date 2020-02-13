@@ -17,7 +17,7 @@ export default class Dashboard extends Component {
         <nav className="flex bg-gray-900 shadow-lg h-12 text-white justify-between flex-wrap items-center">
           {/* Nav Logo area */}
           <div className="">
-            <div className="text-xs pl-1">Logo B</div>
+            <div className="text-xs pl-1">Logo B - 2</div>
           </div>
           {/* Nav Center search area */}
           <div>
