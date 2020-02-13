@@ -2,15 +2,7 @@ import React, { Component } from "react";
 //import PropTypes from "prop-types";
 
 class Modal extends Component {
-  state = { setShowModal: this.props.durum, setImg: false };
-
-  componentWillReceiveProps(nextProps) {
-    let show = nextProps["durum"];
-    if (show) {
-      this.setState({ setShowModal: show });
-      this.props = false;
-    }
-  }
+  state = { setShowModal: true, setImg: false, show: true };
 
   Getimg = () => {
     this.setState({ setImg: true });
@@ -25,10 +17,9 @@ class Modal extends Component {
   };
 
   render() {
-    let show = false;
     return (
       <div>
-        {show && (
+        {this.state.setShowModal && (
           <div className="relative z-50">
             <div className="justify-center pt-12 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none bg-gray-900 opacity-50"></div>
             <div className="justify-center pt-12 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none">
