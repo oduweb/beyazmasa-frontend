@@ -1,5 +1,4 @@
 import * as actionTypes from "../redux-actions/actionTypes";
-import initialState from "./initialState";
 
 export default function changePage(state = [], action) {
   switch (action.type) {

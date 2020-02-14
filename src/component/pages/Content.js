@@ -17,7 +17,7 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="shadow-lg bg-gray-800 h-screen text-xs pl-1">
+      <div className=" shadow-lg bg-gray-800 h-full text-xs pl-1">
         <div className="bg-gray-800 text-white h-full p-3 ">
           Mollit tempor laboris ipsum do officia. Enim velit non occaecat elit
           minim. In aliquip sunt laborum anim dolor labore ullamco mollit labore

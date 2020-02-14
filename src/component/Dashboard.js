@@ -12,7 +12,7 @@ import NewUser from "./pages/NewUser";
 export default class Dashboard extends Component {
   render() {
     return (
-      <div className="flex flex-col bg-red-600 h-screen">
+      <div className="flex flex-col bg-red-600 h-full">
         {/* Top navbar area */}
         <nav className="flex bg-gray-900 shadow-lg h-12 text-white justify-between flex-wrap items-center">
           {/* Nav Logo area */}
@@ -46,7 +46,7 @@ export default class Dashboard extends Component {
           </div>
         </nav>
         {/* Side area */}
-        <div className="flex flex-row h-full relative">
+        <div className="flex flex-row h-full relative bg-red-500">
           {/* Side Menu area */}
           <SideMenu info="Ana Sayfa" />
           {/* General Content area */}
