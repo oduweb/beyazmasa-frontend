@@ -46,9 +46,9 @@ export default class Dashboard extends Component {
           </div>
         </nav>
         {/* Side area */}
-        <div className="flex flex-row h-full relative bg-red-500">
+        <div className="flex flex-row h-screen relative bg-red-500">
           {/* Side Menu area */}
-          <SideMenu info="Ana Sayfa" />
+          <SideMenu info="Ana Sayfa" className="h-full" />
           {/* General Content area */}
           <div className="flex flex-col bg-gray-300 w-full relative">
             {/* Mobile hidden menu area */}

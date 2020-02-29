@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class SideMenu extends Component {
   render() {
     return (
-      <div className="bg-gray-800 shadow-xl text-white w-64 text-xs pl-1 left-0 sm:block hidden max-h-full z-30 relative">
+      <div className="bg-gray-800 shadow-xl text-white w-64 text-xs pl-1 left-0 sm:block hidden h-full z-30 relative">
         <p className="text-gray-600 font-light font-thin text-xs pt-2 pb-2 pl-1 italic">
           Side Menu
         </p>
