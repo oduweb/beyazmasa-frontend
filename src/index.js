@@ -8,6 +8,7 @@ import "alertifyjs/build/css/alertify.min.css";
 import { Provider } from "react-redux";
 import configureStore from "./redux-store/redux-reducers/configureStore";
 import "./css/vendor/tailwind.css";
+import "./custome.css";
 
 const store = configureStore();
 
