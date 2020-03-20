@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import App from "./components/App";
+import * as serviceWorker from "./services/serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import "alertifyjs/build/css/alertify.min.css";
 import { Provider } from "react-redux";
 import configureStore from "./redux-store/redux-reducers/configureStore";
-import "./css/vendor/tailwind.css";
-import "./custome.css";
+import "./assets/css/tailwind.css";
+import "./assets/css/custome.css";
 
 const store = configureStore();
 

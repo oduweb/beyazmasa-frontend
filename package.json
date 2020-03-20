@@ -26,12 +26,12 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "serialize-javascript": "^2.1.2",
-    "tailwindcss": "^1.1.4",
+    "tailwindcss-animatecss": "^0.2.7",
     "tailwindcss-animations": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "postcss css/tailwind.css -o src/css/vendor/tailwind.css",
+    "build": "postcss src/assets/css/config/tailwind.css -o src/assets/css/tailwind.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,5 +50,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tailwindcss": "^1.2.0"
+  }
 }

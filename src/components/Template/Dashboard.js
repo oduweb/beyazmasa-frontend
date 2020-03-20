@@ -17,8 +17,18 @@ import {
 import { FaUsersCog } from "react-icons/fa";
 import { GoZap } from "react-icons/go";
 
-export default class Dashboard6 extends Component {
+export default class Dashboard extends Component {
+  state = {
+    anis: "",
+    show: true
+  };
+
+  change = () => {
+    this.setState({ show: !this.state.show });
+  };
+
   render() {
+    const shows = this.state.show;
     return (
       <div className="text-xs font-sans font-light relative">
         {/** Start Mega Modal   */}
@@ -62,7 +72,33 @@ export default class Dashboard6 extends Component {
           </div>
         </div>
         {/** End  Modal   */}
-
+        {/** Start Notification   */}
+        <div className="modal absolute w-64 right-0 z-50 mr-5 mt-12 overflow-y-auto bg-transparent flex justify-end hidden">
+          <div className="flex flex-col" style={{ fontSize: "9px" }}>
+            <div className="bg-gray-200 w-64 p-4 rounded shadow-lg">
+              <div className="flex flex-row items-center">
+                <div className="w-20">
+                  <img
+                    className="rounded-full h-10 w-10 object-cover"
+                    alt="logo"
+                    src={require("../../assets/images/maia.jpg")}
+                  ></img>
+                </div>
+                <div className="flex flex-col">
+                  <div className="font-bold">Title </div>
+                  <div>
+                    Message Notifications Message Notifications Message
+                    Notifications
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-200 w-64 p-4 rounded shadow-lg mt-2">
+              Message Notifications Message Notifications Message Notifications
+            </div>
+          </div>
+        </div>
+        {/** End  Notification   */}
         <div className="flex flex-row ">
           {/** Start Side  */}
           <div className="w-8 bg-gray-600 h-full min-h-screen flex-shrink-0">
@@ -72,7 +108,7 @@ export default class Dashboard6 extends Component {
             >
               <div className="pl-1 pt-2 flex flex-row items-center mb-2">
                 <img
-                  src={require("../img/oduk.png")}
+                  src={require("../../assets/images/oduk.png")}
                   height="24"
                   width="24"
                   alt="logo"
@@ -89,7 +125,7 @@ export default class Dashboard6 extends Component {
             >
               <div className="absolute top-0 mt-2 ">
                 <img
-                  src={require("../img/oduk.png")}
+                  src={require("../../assets/images/oduk.png")}
                   height="24"
                   width="24"
                   alt="logo"
@@ -136,7 +172,7 @@ export default class Dashboard6 extends Component {
                 </div>
                 <div>
                   <img
-                    src={require("../img/maia.jpg")}
+                    src={require("../../assets/images/maia.jpg")}
                     className="rounded-full h-6 w-6 object-cover"
                     alt="personel"
                   ></img>
@@ -170,61 +206,63 @@ export default class Dashboard6 extends Component {
           </div>
           {/** End Side  */}
           {/** Start Side Nav  */}
-          <div className="bg-gray-300 w-32 flex-shrink-0 overflow-hidden  sm:block hidden">
-            <div className="side bg-gray-300 h-full max-h-screen overflow-y-auto overflow-x-hidden">
-              <div className="mt-2 pl-2 mb-2">
-                {/** Start Side Nav  */}
-                <div
-                  className="bg-indigo-100 rounded-t pl-2 p-1 flex flex-row justify-between  items-center shadow"
-                  style={{ fontSize: "9px" }}
-                >
-                  <div className="flex flex-row items-center">
-                    <TiThLargeOutline></TiThLargeOutline>
-                    <div className="pl-2">Dashboard</div>
-                  </div>
+          {shows && (
+            <div className=" bg-gray-300 w-32 flex-shrink-0 overflow-hidden sm:block hidden">
+              <div className="side bg-gray-300 h-full max-h-screen overflow-y-auto overflow-x-hidden">
+                <div className="mt-2 pl-2 mb-2">
+                  {/** Start Side Nav  */}
+                  <div
+                    className="bg-indigo-100 rounded-t pl-2 p-1 flex flex-row justify-between  items-center shadow"
+                    style={{ fontSize: "9px" }}
+                  >
+                    <div className="flex flex-row items-center">
+                      <TiThLargeOutline></TiThLargeOutline>
+                      <div className="pl-2">Dashboard</div>
+                    </div>
 
-                  <div>
-                    <MdKeyboardArrowDown></MdKeyboardArrowDown>
-                  </div>
-                </div>
-                <div
-                  className="bg-gray-200 p-1 pl-2 py-2 rounded-b shadow "
-                  style={{ fontSize: "9px" }}
-                >
-                  <div className="border-l border-indigo-500 border-solid -ml-2 ">
-                    <div className="ml-2 flex flex-row items-center ">
-                      <div className="flex flex-row items-center">
-                        <TiMediaStop color="blue"></TiMediaStop>
-                        <div className="pl-2 font-bold">Default</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-ml-2 mt-2">
-                    <div className="ml-2 flex flex-row items-center ">
-                      <div className="flex flex-row items-center">
-                        <TiThSmallOutline></TiThSmallOutline>
-                        <div className="pl-2">Classic</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/** End  Side Nav */}
-                {/** Start Modal Nav Title */}
-                <div className="mt-5 mb-2" style={{ fontSize: "9px" }}>
-                  <div className="text-gray-500">USERS</div>
-                </div>
-                {/** End Modal Nav Title */}
-                <div style={{ fontSize: "9px" }}>
-                  <div className="pl-2 p-1 flex flex-row items-center text-gray-500 font-bold hover:text-indigo-500 cursor-pointer">
                     <div>
-                      <FiUsers></FiUsers>
+                      <MdKeyboardArrowDown></MdKeyboardArrowDown>
                     </div>
-                    <div className="pl-4 ">User</div>
+                  </div>
+                  <div
+                    className="bg-gray-200 p-1 pl-2 py-2 rounded-b shadow "
+                    style={{ fontSize: "9px" }}
+                  >
+                    <div className="border-l border-indigo-500 border-solid -ml-2 ">
+                      <div className="ml-2 flex flex-row items-center ">
+                        <div className="flex flex-row items-center">
+                          <TiMediaStop color="blue"></TiMediaStop>
+                          <div className="pl-2 font-bold">Default</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="-ml-2 mt-2">
+                      <div className="ml-2 flex flex-row items-center ">
+                        <div className="flex flex-row items-center">
+                          <TiThSmallOutline></TiThSmallOutline>
+                          <div className="pl-2">Classic</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/** End  Side Nav */}
+                  {/** Start Modal Nav Title */}
+                  <div className="mt-5 mb-2" style={{ fontSize: "9px" }}>
+                    <div className="text-gray-500">USERS</div>
+                  </div>
+                  {/** End Modal Nav Title */}
+                  <div style={{ fontSize: "9px" }}>
+                    <div className="pl-2 p-1 flex flex-row items-center text-gray-500 font-bold hover:text-indigo-500 cursor-pointer">
+                      <div>
+                        <FiUsers></FiUsers>
+                      </div>
+                      <div className="pl-4 ">User</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           {/** End Side Nav */}
           {/** Start Content  */}
           <div className="bg-gray-300 w-full overflow-hidden">
@@ -233,7 +271,7 @@ export default class Dashboard6 extends Component {
                 <div className="flex lg:flex-row sm:flex-col flex-col md:flex-row justify-between items-center">
                   <div>Content Title</div>
                   <div className="mr-2 lg:flex-row sm:flex-col flex-col md:flex-row flex items-center">
-                    <div className="relative flex flex-row items-center">
+                    <div className="relative flex flex-row items-center outline-none">
                       <span className="absolute ml-1">
                         <FiSearch></FiSearch>
                       </span>
@@ -244,13 +282,17 @@ export default class Dashboard6 extends Component {
                       ></input>
                     </div>
                     <div className=" flex flex-row sm:mt-2 lg:mt-0 md:mt-0 mt-2">
-                      <div className="bg-gray-500 rounded px-3 py-1 text-white mr-1 flex flex-row items-center cursor-pointer">
+                      <div
+                        onClick={this.change}
+                        className="bg-gray-500 rounded px-3 py-1 text-white mr-1 flex flex-row items-center cursor-pointer"
+                      >
                         <span className="mr-1">
                           <MdFilterList></MdFilterList>
                         </span>
-                        Filters
+                        <span className="select-none">Filters</span>
                       </div>
-                      <div className="bg-gray-500 rounded px-3 py-1 text-white mr-1 flex flex-row items-center cursor-pointer">
+
+                      <div className=" bg-gray-500 rounded px-3 py-1 text-white mr-1 flex flex-row items-center cursor-pointer">
                         <span className="mr-1">
                           <GoZap></GoZap>
                         </span>
