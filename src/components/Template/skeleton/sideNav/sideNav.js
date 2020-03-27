@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import {
   TiThLargeOutline,
@@ -6,7 +7,7 @@ import {
   TiThSmallOutline
 } from "react-icons/ti";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FiUsers } from "react-icons/fi";
+import { FiUsers, FiBox } from "react-icons/fi";
 
 class sideNav extends Component {
   render() {
@@ -32,10 +33,12 @@ class sideNav extends Component {
           >
             <div className="border-l border-indigo-500 border-solid -ml-2 ">
               <div className="ml-2 flex flex-row items-center ">
-                <div className="flex flex-row items-center">
-                  <TiMediaStop color="blue"></TiMediaStop>
-                  <div className="pl-2 font-bold">Default</div>
-                </div>
+                <Link to="/Dashboard">
+                  <div className="flex flex-row items-center">
+                    <TiMediaStop color="blue"></TiMediaStop>
+                    <div className="pl-2 font-bold">Default</div>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="-ml-2 mt-2">
@@ -60,6 +63,16 @@ class sideNav extends Component {
               </div>
               <div className="pl-4 ">User</div>
             </div>
+          </div>
+          <div style={{ fontSize: "9px" }}>
+            <Link to="/ui">
+              <div className="pl-2 p-1 flex flex-row items-center text-gray-500 font-bold hover:text-indigo-500 cursor-pointer">
+                <div>
+                  <FiBox></FiBox>
+                </div>
+                <div className="pl-4 ">UI</div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
