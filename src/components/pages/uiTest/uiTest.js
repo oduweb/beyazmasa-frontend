@@ -1,12 +1,69 @@
 import React, { Component } from "react";
 
+import Grid from "~/ui/grid";
+
+
 class uiTest extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <h3>UI - Elements</h3>
-          <div>..</div>
+      <div className="">
+        <div className="pr-2">
+          <h3 className="text-3xl">UI - Elements</h3>
+          <div className="mt-1 bg-white rounded p-2">
+            <h6 className="text-base"># Grid</h6>
+            <span className="text-gray-500">Izgara düzenindeki sütunları belirtmek için yardımcı element.</span>
+            <div>
+              <table className="table-auto w-full">
+                <thead>
+                  <tr>
+                    <th className="text-left px-2 py-2">PropTypes</th>
+                    <th className="text-left px-2 py-2">Default</th>
+                    <th className="text-left px-2 py-2">Type</th>
+                    <th className="text-left px-2 py-2">Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border px-2 py-2">!cols</td>
+                    <td className="border px-2 py-2">1</td>
+                    <td className="border px-2 py-2">String</td>
+                    <td className="border px-2 py-2">Grid'inizdeki kolon sayısını belirte bilirsiniz.</td>
+                  </tr>
+                  <tr>
+                    <td className="border px-2 py-2">gap</td>
+                    <td className="border px-2 py-2">0</td>
+                    <td className="border px-2 py-2">String</td>
+                    <td className="border px-2 py-2">Grid'inizdeki kolonların aralarında boşluk belirleye bilirsiniz.</td>
+                  </tr>
+                  <tr>
+                    <td className="border px-2 py-2">customeClass</td>
+                    <td className="border px-2 py-2">null</td>
+                    <td className="border px-2 py-2">String</td>
+                    <td className="border px-2 py-2">Tailwind CSS yada Normal CSS yazabilirsiniz.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span className="text-gray-400 italic">! işareti olanlar zorunludur.</span>
+            </div>
+            <div>
+              <Grid customeClass="mt-2 p-2 border rounded-t text-center" cols={"4"} gap={"2"}>
+                <div className="bg-gray-500">1</div>
+                <div className="bg-gray-400">2</div>
+                <div className="bg-gray-500">3</div>
+                <div className="bg-gray-400">4</div>
+              </Grid>
+              <div className="p-2 bg-gray-800 text-white">
+                <span style={{ fontSize: '9px' }}>
+                  {`import Grid from "~/ui/grid";`}<br></br><br></br>
+                  {`<Grid cols={"4"} gap={"2"}>`}<br></br>
+                  {`<div className="bg-gray-500">1</div>`}<br></br>
+                  {`...`}<br></br>
+                  {`<div className="bg-gray-400">4</div>`}<br></br>
+                  {`</Grid>`}<br></br>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

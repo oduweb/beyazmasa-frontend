@@ -30,7 +30,7 @@
     "tailwindcss-animations": "^1.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "postcss src/assets/css/config/tailwind.css -o src/assets/css/tailwind.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,6 +51,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "babel-plugin-root-import": "^6.5.0",
+    "babel-preset-react-app": "^9.1.2",
+    "customize-cra": "^0.9.1",
+    "react-app-rewired": "^2.1.5",
     "tailwindcss": "^1.2.0"
   }
 }
