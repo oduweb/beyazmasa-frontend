@@ -45,7 +45,7 @@ export default class Dashboard extends Component {
           )}
           {/** End Side Nav */}
           {/** Start Content  */}
-          <div className="bg-gray-300 w-full overflow-hidden">
+          <div id="content" className="bg-gray-300 w-full overflow-hidden">
             <Content></Content>
           </div>
           {/** End Content  */}
