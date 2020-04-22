@@ -9,6 +9,10 @@ class uiTest extends Component {
     alert("sds");
   };
 
+  handlerClick2 = () => {
+    alert("geldi");
+  };
+
   render() {
     return (
       <div className="">
@@ -95,7 +99,7 @@ class uiTest extends Component {
           </div>
           <div className="mt-1 bg-white rounded p-2">
             <div>
-              <DefaultButton></DefaultButton>
+              <DefaultButton onClick={this.handlerClick2}></DefaultButton>
             </div>
           </div>
         </div>

@@ -6,15 +6,20 @@ const style = {
   icon: "",
   selected: "",
   wrapper:
-    "bg-blue-500 hover:bg-blue-700 active:border-red-900 text-white font-bold py-1 px-4 rounded border"
+    "bg-blue-500 active:bg-blue-700 text-white font-bold py-1 px-4 rounded border focus:outline-none",
 };
 
 class defaultButton extends Component {
   render() {
-    const { disabled, extraClassname, options, placeholder } = this.props;
+    const { extraClassname } = this.props;
     return (
       <div>
-        <button className={cls(style.wrapper, extraClassname)}>Button</button>
+        <button
+          onClick={this.props.onClick}
+          className={cls(style.wrapper, extraClassname)}
+        >
+          Button
+        </button>
       </div>
     );
   }
