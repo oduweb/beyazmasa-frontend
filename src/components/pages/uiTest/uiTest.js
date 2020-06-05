@@ -1,18 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Grid from "~/ui/grid";
-import ContentTitle from "~/ui/contentTitle";
-import DefaultButton from "~/ui/defaultButton";
+import Grid from '~/ui/grid';
+import ContentTitle from '~/ui/contentTitle';
+import { bindActionCreators } from 'redux';
+import { showModal } from '../../../store/redux-actions/modalActions';
+import { connect } from 'react-redux';
 
 class uiTest extends Component {
-  test = () => {
-    alert("sds");
-  };
-
-  handlerClick2 = () => {
-    alert("geldi");
-  };
-
   render() {
     return (
       <div className="">
@@ -70,8 +64,8 @@ class uiTest extends Component {
             <div>
               <Grid
                 customeClass="mt-2 p-2 border rounded-t text-center"
-                cols={"4"}
-                gap={"2"}
+                cols={'4'}
+                gap={'2'}
               >
                 <div className="bg-gray-500">1</div>
                 <div className="bg-gray-400">2</div>
@@ -79,7 +73,7 @@ class uiTest extends Component {
                 <div className="bg-gray-400">4</div>
               </Grid>
               <div className="p-2 bg-gray-800 text-white rounded-b">
-                <span style={{ fontSize: "9px" }}>
+                <span style={{ fontSize: '9px' }}>
                   {`import Grid from "~/ui/grid";`}
                   <br></br>
                   <br></br>
@@ -99,7 +93,13 @@ class uiTest extends Component {
           </div>
           <div className="mt-1 bg-white rounded p-2">
             <div>
-              <DefaultButton onClick={this.handlerClick2}></DefaultButton>
+              <button
+                onClick={(e) => {
+                  this.props.dispatch(showModal());
+                }}
+              >
+                Show
+              </button>
             </div>
           </div>
         </div>
@@ -108,4 +108,10 @@ class uiTest extends Component {
   }
 }
 
-export default uiTest;
+function mapDispatchToProps(dispatch) {
+  return {
+    modalstate: bindActionCreators(showModal, dispatch),
+  };
+}
+
+export default connect(mapDispatchToProps)(uiTest);

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Example_page from "../../../pages/example_page/Example";
-import ui from "../../../pages/uiTest/uiTest";
-import notFound from "../../../pages/notFound/notFound";
+import Example_page from '../../../pages/example_page/Example';
+import ui from '../../../pages/uiTest/uiTest';
+import notFound from '../../../pages/notFound/notFound';
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 
 class content extends Component {
   render() {
